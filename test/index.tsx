@@ -1,7 +1,4 @@
-/* @refresh reload */
-import { render } from "solid-js/web";
+import { createComponent } from "../src/index.js";
 import App from "./App.js";
 
-const root: HTMLDivElement = document.querySelector("#root")!;
-
-render(() => <App/>, root);
+createComponent("app-component", App);
