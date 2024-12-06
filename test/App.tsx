@@ -11,3 +11,11 @@ export default function App() {
     </>
   );
 }
+
+declare class AppComponentElement extends HTMLElement {}
+
+declare global {
+  interface HTMLElementTagNameMap {
+    "app-component": AppComponentElement;
+  }
+}

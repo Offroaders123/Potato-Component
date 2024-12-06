@@ -17,3 +17,11 @@ export default function NumText(props: NumTextProps) {
     </>
   );
 }
+
+declare class NumTextElement extends HTMLElement {}
+
+declare global {
+  interface HTMLElementTagNameMap {
+    "num-text": NumTextElement;
+  }
+}
