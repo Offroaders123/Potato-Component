@@ -25,3 +25,13 @@ declare global {
     "num-text": NumTextElement;
   }
 }
+
+declare module "solid-js" {
+  export namespace JSX {
+    interface NumTextHTMLAttributes<T> extends HTMLAttributes<T>, Partial<NumTextProps> {}
+
+    interface HTMLElementTags {
+      "num-text": NumTextHTMLAttributes<NumTextElement>;
+    }
+  }
+}
